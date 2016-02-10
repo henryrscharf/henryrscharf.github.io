@@ -18,5 +18,5 @@ twitter_username: pejota52
 github_username:  henryrscharf
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 highlighter: rogue
