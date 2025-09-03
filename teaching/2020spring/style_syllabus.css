@@ -1,0 +1,40 @@
+/* Whole document: */
+body{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+/*links*/
+a{
+  font-weight: 400;
+  color: black;
+}
+
+h1{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+h2{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+h3{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+th{
+  font-weight: 500;
+}
+
+/*orange*/
+.project{
+  color: rgb(170,68,0);
+}
+
+/*blue*/
+.indep{
+  color: rgb(0,68,102);
+}

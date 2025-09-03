@@ -1,0 +1,85 @@
+---
+output: 
+  html_document:
+    css: style_syllabus.css
+    includes: 
+      in-header: header_syllabus.html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Applied Spatio-Temporal Statistics
+
+## Course calendar
+
+```{r calendar}
+cal <- matrix(c(
+  "", 
+  "first day: what will this class be like?",
+  
+  "data manipulation + viz.",
+  "*Rlab*: data manipulation + viz.",
+
+  "<span class='indep'>IRP: Henry (viz: animation)</span>; <br> static spatial data: discrete",
+  "static spatial data: discrete",
+  
+  "<span class='indep'>IRP: Henry (malaria incidence in Namibia)</span>; <br> static spatial data: discrete",
+  "static spatial data: geostatistical",
+
+  "static spatial data: geostatistical",
+  "*Rlab*: geostatistical + geostatistical",
+  
+  "<span class='indep'>IRP: _____ </span>; <br> static spatial data: point process",
+  "<span class='indep'>IRP: _____ </span>; <br> static spatial data: point process",
+
+  "static spatial data: point process",
+  "*Rlab*: point process",
+  
+  "<span class='indep'>IRP: _____ </span>; <br> 1D geostatistical",
+  "<span class='indep'>IRP: _____ </span>; <br> 1D areal",
+  
+  "<span class='indep'>IRP: _____ </span>; <br> 3D geostatistical/areal; <br> <span class='project'>begin looking for project data</span>",
+  "<span class='indep'>IRP: _____ </span>; <br> 1D point process",
+  
+  "<span class='indep'>IRP: _____</span>; <br> 3D point process",
+  "*Rlab*: 1D + 3D",
+  
+  "no class",
+  "no class",
+  
+  "<span class='indep'>IRP: _____ </span>; <br> spatio-temporal geospatial separable; <br> <span class='project'>**due**: EDA selected dataset</span>",
+  "<span class='indep'>IRP: _____ </span>; <br> spatio-temporal geospatial separable",
+  
+  "<span class='indep'>IRP: _____ </span>; <br> geospatial non-separable; <br> <span class='project'>**due**: proposed analysis, goals, division of duties</span>",
+  "*Rlab*: spatio-temporal geospatial",
+
+  "<span class='indep'>IRP: _____</span>; <br> SDEs; <br> <span class='project'>project progress checkin meetings this week</span>",
+  "SDEs; <br> <span class='project'>project progress checkin meetings this week</span>",
+  
+  "<span class='indep'>IRP: _____</span>; <br> SDEs",
+  "*Rlab*: SDEs/projects",
+  
+  "<span class='project'>**presentations**: <br> Group 1 <br> Group 2 <br> Group 3 </span>",
+  "<span class='project'>**presentations**: <br> Group 4 <br> Group 5 <br> Group 6 </span>",
+
+  "no class; <br> <span class='project'>**due**: final project reports (12:30pm)</span>",
+  ""
+), byrow = T, ncol = 2)
+cal <- cbind(c(1:10, "SB", 11:16),
+  c("", "1/28", "2/4", "2/11", "2/18",
+    "2/25", "3/3", "3/10", "3/17", 
+    "3/24", "4/2", "4/7", "4/14", 
+    "4/21", "4/28", "5/5", "5/12"), 
+  cal[, 1], 
+  c("1/23", "1/30", "2/6", "2/13", 
+    "2/20", "2/27", "3/5", "3/12", 
+    "3/19", "3/26", "3/31", "4/9", 
+    "4/16", "4/23", "4/30", "5/7", ""), 
+  cal[, 2])
+colnames(cal) <- c("Week", 
+                   "Tuesday", "Topics", 
+                   "Thursday", "Topics")
+knitr::kable(cal)
+```
